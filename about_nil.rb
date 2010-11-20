@@ -32,7 +32,7 @@ class AboutNil < EdgeCase::Koan
     #    obj.nil?
     # or
     #    obj == nil
-    # Why?
+    # Why? they are equivalent
   end
 
 end
