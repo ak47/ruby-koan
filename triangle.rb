@@ -14,7 +14,12 @@
 #   about_triangle_project_2.rb
 #
 def triangle(a, b, c)
-  case [a,b,c].uniq.size
+  ut = [a,b,c].uniq
+
+  raise TriangleError unless a>0 && b>0 && c>0
+  raise TriangleError unless a+b>c && b+c>a && a+c>b
+  
+  case ut.size
   when 1
     :equilateral
   when 2
